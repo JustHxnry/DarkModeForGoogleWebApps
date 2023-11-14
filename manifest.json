@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode for Google Web Apps",
+  "version": "1.0",
+  "description": "Enables dark mode for web version of Google Apps",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_icon": "./icon.png",
+    "default_popup": "./popup.html"
+  },
+  "icons": {
+    "48": "./icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["./calendar.google.js"]
+    }
+  ]
+}
